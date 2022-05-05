@@ -15,7 +15,7 @@ public class Lista {
 
 	// esse método deverá ser implementado de acordo com o enunciado do exercício
     
-private void inserirPrioridade(No aux) {
+private void inserirPrioridade(No Prioridade) {
 
       No Antecessor = null;
 	  No Primeiro = inicio;  
@@ -23,19 +23,19 @@ private void inserirPrioridade(No aux) {
 
 	
 		if(inicio == null) {
-			inicio = aux;
+			inicio = Prioridade;
 			fim = inicio;
 		} else if (inicio.cor.equalsIgnoreCase("verde")) {
-			aux.prox = inicio;
-			inicio = aux;
+			Prioridade.prox = inicio;
+			inicio = Prioridade;
 		} else if (fim.cor.equalsIgnoreCase("amarelo")) {
-			inserirFim(aux);
+			inserirFim(Prioridade);
 		} else {
 			do {
 				
 				if(Primeiro .cor.equals("verde")) {
-					aux.prox = Antecessor .prox;
-					Antecessor.prox = aux;
+					Prioridade.prox = Antecessor .prox;
+					Antecessor.prox = Prioridade;
 					break;
 				}
 				Antecessor = Primeiro ;
