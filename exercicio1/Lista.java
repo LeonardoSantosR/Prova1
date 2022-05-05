@@ -23,17 +23,22 @@ private void inserirPrioridade(No Prioridade) {
 
 	
 		if(inicio == null) {
+			
 			inicio = Prioridade;
 			fim = inicio;
 		} else if (inicio.cor.equalsIgnoreCase("verde")) {
+			
 			Prioridade.prox = inicio;
 			inicio = Prioridade;
 		} else if (fim.cor.equalsIgnoreCase("amarelo")) {
+			
 			inserirFim(Prioridade);
 		} else {
+			
 			do {
 				
 				if(Primeiro .cor.equals("verde")) {
+					
 					Prioridade.prox = Antecessor .prox;
 					Antecessor.prox = Prioridade;
 					break;
@@ -50,6 +55,7 @@ private void inserirPrioridade(No Prioridade) {
 
 	// método inserir. Esse método será chamado a partir da classe Main
 	public void inserir(int numero, String cor) {
+		
 		No aux = new No(numero, cor);
 		if (cor.equalsIgnoreCase("verde")) {
 			inserirFim(aux);

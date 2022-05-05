@@ -20,9 +20,11 @@ public class Main {
 	}
 	
 	public static void inverter(Lista lista) {
+		
 		No inversão = lista.fim;
 		lista.inicio = lista.fim;
 		do {
+			
 			inversão.dir = inversão.esq;
 			inversão = inversão.esq;
 		} while (inversão != null); 

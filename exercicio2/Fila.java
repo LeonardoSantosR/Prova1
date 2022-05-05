@@ -18,13 +18,18 @@ public class Fila {
 	
 	// método para desenfileirar um elemento da fila, ou seja, remover o primeiro elemento
 	public void desenfileirar() {
+		
 		if(inicio ==null) {
+			
 			System.out.println("A fila de onibus está vazia");
 		} else {
+			
 			if(inicio.esq != null) {
+				
 				inicio.dir = null;
 				inicio = inicio.esq;
 			} else {
+				
 				 inicio = null;
 			}
 		}
