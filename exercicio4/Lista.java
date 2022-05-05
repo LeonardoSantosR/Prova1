@@ -12,24 +12,24 @@ public class Lista {
 			inicio = Inserir;
 			fim = Inserir;
 		} else if (Inserir.dado < inicio.dado){
-			Inserir.dir = inicio;
-			inicio.esq = Inserir;
+			Inserir.esq = inicio;
+			inicio.dir = Inserir;
 			inicio = Inserir;	
 		} else if (Inserir.dado > fim.dado) {
-			fim.dir = Inserir;
-			Inserir.esq = fim;
+			fim.esq = Inserir;
+			Inserir.dir = fim;
 			fim = Inserir;
 		} else {
 			No Inserir2 = inicio;
 			do {
-				if(Inserir.dado > Inserir2.dado && Inserir.dado < Inserir2.dir.dado) {
-					Inserir.esq = Inserir2;
-					Inserir.dir = Inserir2.dir;
-					Inserir2.dir.esq = Inserir;
-					Inserir2.dir = Inserir;
+				if(Inserir.dado > Inserir2.dado && Inserir.dado < Inserir2.esq.dado) {
+					Inserir.dir = Inserir2;
+					Inserir.esq = Inserir2.esq;
+					Inserir2.esq.dir = Inserir;
+					Inserir2.esq = Inserir;
 					break;
 				}
-				Inserir2 = Inserir2.dir;
+				Inserir2 = Inserir2.esq;
 			} while(Inserir2 != null);
 			
 		}
